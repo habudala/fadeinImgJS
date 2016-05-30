@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fade-In-Slideshow</title>
+	<style type="text/css">
+	#slideshow {height:100vh;}
+	
+    
+}
+	</style>
+</head>
+<body>
+	<div id="slideshow">
+	   <div>
+	     
+	   </div>
+	 
+
+	
+	<script type="text/javascript">
+	
+				///////////////////////////bg stuff///////////////////////
+		imgArr = ["images/bg1.jpg","images/bg2.jpg","images/bg3.jpg","images/bg4.jpg"];
+		var i = 1;
+
+
+		function repeat () {
+			
+			var bg = document.getElementById("slideshow");
+			bg.style.transition = "background 5s ease-in-out 1s";
+			bg.style.background = "url(" + imgArr[i]  + ")";
+			bg.style.backgroundPosition = "center";
+			bg.style.backgroundSize = "cover ";
+
+			i++;
+
+			console.log(bg.style.background);
+
+			if (i > 3) {i = 0;}
+			
+		}
+
+		var timer = window.setInterval(repeat,9000);
+
+
+////////////////////////////////////////////////////////////////////
+
+	</script>
+</body>
+</html>
